@@ -22,7 +22,7 @@ Este projeto implementa uma autenticação simples usando JSON Web Tokens (JWT) 
 ---
 
 ## Estrutura do projeto
-
+{
 ├── controllers
 │ ├── login.js # Função que simula login e gera token JWT
 │ └── posts.js # Funções que manipulam dados de posts
@@ -35,7 +35,7 @@ Este projeto implementa uma autenticação simples usando JSON Web Tokens (JWT) 
 │ └── posts.js # Rota para posts protegida por autenticação
 ├── server.js # Inicializa o servidor Express
 └── .env # Variáveis de ambiente, incluindo SECRET_JWT
-
+}
 ---
 
 ## Detalhes dos arquivos
@@ -70,7 +70,6 @@ Este projeto implementa uma autenticação simples usando JSON Web Tokens (JWT) 
 ### middlewares/auth.js - Middleware de autenticação JWT
 
 - Middleware que verifica se o token JWT está presente e é válido
-- Verifica se o cabeçalho `Authorization` contém um token válido.
 - Se o token for válido, anexa os dados do usuário à requisição e permite acesso
 - Se o token for inválido ou ausente, bloqueia o acesso com erro 401
 - Usa a biblioteca `jsonwebtoken` para criar e verificar tokens.
